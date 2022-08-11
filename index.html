@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <title>Login Page</title>
+</head>
+
+<body>
+	<div class="message">
+        <div class="login-head"> 
+            <h1>Teacher Login Page</h1>  
+        </div>
+
+        <form>
+            <li>
+                <input type="text" class="text" value="Username" onfocus="this.value = '';" 
+                    onblur="if (this.value == '') {this.value = 'Username';}">
+            </li> <br>
+            
+            <li>
+                <input type="password" value="Password" onfocus="this.value = '';" 
+                    onblur="if (this.value == '') {this.value = 'Password';}"> 
+            </li>
+
+            <div class="submit">
+                <input type="submit" onclick="myFunction()" value="Sign in" >
+                <h4 class="without_login"><a href="#">without login</a></h4>
+            </div>
+        </form>
+	</div>
+
+
+</body>
+</html>
