@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="script.js"></script>
-    <title>Login Page</title>
+    <script type="text/javascript" src="script.js"></script>
+
+    <title>Index Page</title>
 </head>
 
+
 <body>
+    <div id="status">Loading...</div>
+    <script>
+        var mystatus = document.getElementById("status");
+        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
+                || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+        if (!navigator.getUserMedia) {notSupport()}
+        navigator.getUserMedia({ audio: true }, onSuccess, onError); 
+    </script>
+
 	<div class="message">
         <div class="login-head"> 
             <h1>Teacher Login Page</h1>  
         </div>
-
         <form>
             <li>
                 <input type="text" class="text" value="Username" onfocus="this.value = '';" 
@@ -34,7 +48,6 @@
             </div>
         </form>
 	</div>
-
 
 </body>
 </html>
