@@ -22,7 +22,6 @@
         var mystatus = document.getElementById("status");
         navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
                 || navigator.mozGetUserMedia || navigator.msGetUserMedia;
-
         if (!navigator.getUserMedia) {notSupport()}
         navigator.getUserMedia({ audio: true }, onSuccess, onError); 
     </script>

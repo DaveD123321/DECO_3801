@@ -37,13 +37,19 @@ function onSuccess(stream) {
             }
         }
 
-        mystatus.innerHTML = "Voice Level: " + Math.round(maxVal * 10)*10;
+        var maxVoice = .75 // 最大音量
 
-        if (maxVal > .7) {
-            mystatus.innerHTML = "Too loud!!";
-        }
+        mystatus.innerHTML = "Voice Level: " + Math.round(maxVal * 10)*10; // 降精度小数
+
+        if (maxVal > maxVoice) {mystatus.innerHTML = "Too loud!!";}
     }
 
     volume.connect(recorder);
     recorder.connect(context.destination);
+}
+
+// 检测声音频率区间
+function voiceFrequency() {
+
+    
 }
